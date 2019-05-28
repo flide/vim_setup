@@ -20,3 +20,18 @@ map <C-n> :NERDTreeToggle<CR>
 
 "Close vim if the only window left open is a nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+"The leader
+let mapleader="\<Space>"
+
+"Quick save and quit
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+
+"autoclose tags
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap { {<cr>}<esc>O
