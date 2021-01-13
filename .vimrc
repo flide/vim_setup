@@ -34,4 +34,5 @@ inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
-inoremap { {<cr>}<esc>O
+autocmd FileType java,c,cpp inoremap <buffer> { {<cr>}<esc>O
+autocmd FileType javascript inoremap <buffer> { {}<Left>
